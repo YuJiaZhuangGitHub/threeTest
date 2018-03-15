@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>sell</title><link href=./static/css/app.a69d68f4f39182db06777430f3374aad.css rel=stylesheet><link href=./static/css/app.a69d68f4f39182db06777430f3374aad.css rel=stylesheet></head><body><div id=app></div><script>!(function(win, doc){
+        function setFontSize() {
+          // 获取window 宽度
+          // zepto实现 $(window).width()就是这么干的
+          var winWidth =  window.innerWidth;
+          // doc.documentElement.style.fontSize = (winWidth / 640) * 100 + 'px' ;
+          // 2016-01-13 订正
+          // 640宽度以上进行限制 需要css进行配合
+          var size = (winWidth / 1920) * 100;
+          doc.documentElement.style.fontSize = (size < 100 ? size : 100) + 'px' ;
+        }
+        var evt = 'onorientationchange' in win ? 'orientationchange' : 'resize';
+        var timer = null;
+        win.addEventListener(evt, function () {
+          clearTimeout(timer);
+          timer = setTimeout(setFontSize, 300);
+        }, false);
+        win.addEventListener("pageshow", function(e) {
+          if (e.persisted) {
+            clearTimeout(timer);
+            timer = setTimeout(setFontSize, 300);
+          }
+        }, false);
+        // 初始化
+        setFontSize();
+      }(window, document));</script><script type=text/javascript src=./static/js/manifest.82c2fb3c08a86b89afa4.js></script><script type=text/javascript src=./static/js/vendor.6b70393daeaa831143f4.js></script><script type=text/javascript src=./static/js/app.102684f32ab7727d768e.js></script><script type=text/javascript src=./static/js/manifest.82c2fb3c08a86b89afa4.js></script><script type=text/javascript src=./static/js/vendor.6b70393daeaa831143f4.js></script><script type=text/javascript src=./static/js/app.102684f32ab7727d768e.js></script></body></html>
