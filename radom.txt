@@ -1,4 +1,7 @@
 This is a txt.
 This is my word.
 This is change.
-this is three change
+this is three change.
+this is four word.
+this is six change.
+this is seven change.
